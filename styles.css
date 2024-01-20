@@ -30,3 +30,11 @@ body {
     text-align: center;
 }
 
+#tooltip {
+    position: absolute;
+    color: white;
+    background: #444;
+    padding: 1rem;
+    pointer-events: none;
+    opacity: 0;
+}
