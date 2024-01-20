@@ -210,5 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     return legendTemperatures.fillColors[7];
                 }
             })
+            .style("stroke", "white")
+            .style("stroke-width", 0.5);
     }
 });
