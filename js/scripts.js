@@ -17,22 +17,26 @@ document.addEventListener('DOMContentLoaded', function () {
     var legendTemperatures = {
         fillColors: [
             "#FF0000",
-            "#FF6500",
-            "#FFBB00",
-            "#F4FF00",
-            "#00FFE7",
-            "#00D0FF",
-            "#00A3FF",
+            "#FF5500",
+            "#FFAA00",
+            "#FFFF00",
+            "#80FF00",
+            "#00FF80",
+            "#00FFFF",
+            "#00AAFF",
+            "#0055FF",
             "#0000FF",
         ],
         degreesCelsius: [
             12,
+            11,
             10,
+            9,
             8,
+            7,
             6,
+            5,
             4,
-            2,
-            0,
         ],
         size: 30
     }
@@ -206,8 +210,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 else if (cellTemperature > legendTemperatures.degreesCelsius[6]) {
                     return legendTemperatures.fillColors[6];
                 }
-                else {
+                else if (cellTemperature > legendTemperatures.degreesCelsius[7]) {
                     return legendTemperatures.fillColors[7];
+                }
+                else if (cellTemperature > legendTemperatures.degreesCelsius[8]) {
+                    return legendTemperatures.fillColors[8];
+                }
+                else {
+                    return legendTemperatures.fillColors[9];
                 }
             })
             .style("stroke", "black")
