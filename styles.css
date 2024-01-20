@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    background: black;
+}
+
+.container {
+    width: 85vw;
+    padding: 1rem;
+    margin: 2rem auto;
+    color: black;
+    background: white;
+    position: relative;
+}
+
+#title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+#description {
+    text-align: center;
+}
+
