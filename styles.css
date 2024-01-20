@@ -42,3 +42,7 @@ body {
 #legend text {
     fill: white;
 }
+
+.cell:hover {
+    fill: white;
+}
