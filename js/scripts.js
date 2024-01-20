@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         let year = d["year"].getFullYear();
                         let month = formatTimeMonth(d["month"]);
                         let temperature = (d["variance"] + baseTemperature).toFixed(2);
-                        return `Year: ${year}\nMonth: ${month}\nDegrees: ${temperature}`;
+                        return `Year: ${year}<br>Month: ${month}<br>Degrees: ${temperature}`;
                     });
             })
             .on("mouseout", () => {
