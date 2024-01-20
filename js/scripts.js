@@ -65,4 +65,40 @@ document.addEventListener('DOMContentLoaded', function () {
         .attr("y", legendTemperatures.size + 10)
         .style("font-size", "0.7rem")
         .text((d, i) => `${legendTemperatures.degreesCelsius[i]}°`);
+
+    var xScale = d3
+        .scaleTime()
+        .range([0, SVG_WIDTH]);
+
+    var months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ];
+
+    var yScale = d3
+        .scaleBand()
+        .range([legendTemperatures.size * 2, SVG_HEIGHT]);
+
+    var parseTimeYear = d3.timeParse("%Y");
+
+    var parseTimeMonth = d3.timeParse("%m");
+
+    var formatTimeMonth = d3.timeFormat("%B");
+
+    var request = new XMLHttpRequest();
+    request.open("GET", DATA_SOURCE, true);
+    request.send();
+    request.onload = function () {
+        let json = JSON.parse(request.responseText);
+    }
 });
