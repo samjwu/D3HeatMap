@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     .style("opacity", 1)
                     .style("left", `${event.layerX}px`)
                     .style("top", `${event.layerY}px`)
-                    .text(() => {
+                    .html(() => {
                         let year = d["year"].getFullYear();
                         let month = formatTimeMonth(d["month"]);
                         let temperature = (d["variance"] + baseTemperature).toFixed(2);
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     return legendTemperatures.fillColors[7];
                 }
             })
-            .style("stroke", "white")
+            .style("stroke", "black")
             .style("stroke-width", 0.5);
     }
 });

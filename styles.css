@@ -15,8 +15,8 @@ body {
     width: 85vw;
     padding: 1rem;
     margin: 2rem auto;
-    color: black;
-    background: white;
+    color: white;
+    background: black;
     position: relative;
 }
 
@@ -37,4 +37,8 @@ body {
     padding: 1rem;
     pointer-events: none;
     opacity: 0;
+}
+
+#legend text {
+    fill: white;
 }
